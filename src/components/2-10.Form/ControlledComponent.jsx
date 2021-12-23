@@ -1,34 +1,59 @@
 import React, { useState } from 'react'
 
 export default function ControlledComponent() {
-    const [name, setName] = useState('');
+    const [name, setName] = useState("");
+    const [flavor, setFlavor] = useState("coconut");
     const [essay, setEssay] = useState('please write an essay about ');
 
     function handleChange(event) {
-        setName(event.target.value);
+        const name = event.target.name;
+
+        if(name === 'name'){
+            setName(event.target.value);
+        }else if(name === 'essay'){
+            setEssay(event.target.value);
+        }else{
+            setFlavor(event.target.value);
+        }
+
     }
 
     function handleSubmit(event) {
-        alert(`name: ${name}, essay : ${essay}`);
+        alert(`name: ${name}, essay : ${essay}, flavor : ${flavor}`);
         event.preventDefault();
     }
 
-    function handleEssayChange(event){
-        setEssay(event.target.value);
-    }
+    // function handleFlavorChange(event){
+    //     setFlavor(event.target.value);
+    // }
+
+    // function handleEssayChange(event){
+    //     setEssay(event.target.value);
+    // }
 
     return (
         <>
         <form onSubmit={handleSubmit}>
             <label>
                 Name:
-                <input type="text" value={name} onChange={handleChange} />
+                <input name="name" type="text" value={name} onChange={handleChange} />
             </label>
             <br />
             <br />
             <label>
                 Essay:
-                <textarea value={essay} onChange={handleEssayChange} />
+                <textarea name="essay" value={essay} onChange={handleChange} />
+            </label>
+            <br />
+            <br />
+            <label>
+                Pick your favorite flavor:
+                <select name="flavor" value={flavor} onChange={handleChange}>
+                    <option value="grapefruit">Grapefruit</option>handleChange
+                    <option value="lime">Lime</option>
+                    <option value="coconut">Coconut</option>
+                    <option value="mango">Mango</option>
+                </select>
             </label>
             <input type="submit" value="Submit" />
         </form>
