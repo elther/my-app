@@ -5,6 +5,7 @@ import ControlledComponent from './components/2-10.Form/ControlledComponent';
 import UncontrolledComponent from './components/2-10.Form/UncontrolledComponent';
 import State from './components/3-3.Hooks/State';
 import Reducer from './components/3-3.Hooks/Reducer';
+import WelcomDialog from './components/3-5.Composition/WelcomDialog';
 //import Condition from './components/2-8.ConditionalRendering/Condition';
 
 function App() {
@@ -14,9 +15,10 @@ function App() {
       {/* <List /> */}
       {/* <UncontrolledComponent />
       <ControlledComponent /> */}
-      <State />
+      {/* <State />
       <br />
-      <Reducer />
+      <Reducer /> */}
+      <WelcomDialog />
     </div>
   );
 }
