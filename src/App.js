@@ -1,7 +1,7 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import Memo from './components/3-8.Memoizaion/Memo';
-import Example from './components/3-10.Context/Example';
+//import Memo from './components/3-8.Memoizaion/Memo';
+import Example from './components/3-11.Portal/Example';
 // import Input from './components/3-7.HOC/Input';
 // import Button from './components/3-7.HOC/Button';
 // import List from './components/2-9.List/List';
